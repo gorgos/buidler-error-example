@@ -1,0 +1,31 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/ExampleContract.sol": {
+      "content": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.6.10;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract ExampleContract {\r\n    struct MyStruct {\r\n        address param1;\r\n        address param2;\r\n        address param3;\r\n    }\r\n\r\n    function init(address owner) public {}\r\n\r\n    function init(MyStruct memory myStruct) public {}\r\n}\r\n"
+    }
+  },
+  "settings": {
+    "metadata": {
+      "useLiteralContent": true
+    },
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers"
+        ],
+        "": [
+          "id",
+          "ast"
+        ]
+      }
+    }
+  }
+}
